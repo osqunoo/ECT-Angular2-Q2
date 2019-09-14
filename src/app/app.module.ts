@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TreeComponent } from './tree/tree.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {  MatButtonModule} from '@angular/material';
+import {MatTreeModule} from '@angular/material/tree';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
-  imports: [
+    AppComponent,
+    TreeComponent
+ ],
+ imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    BrowserAnimationsModule,
+    MatTreeModule, MatIconModule, MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
+ ],
+ providers: [],
+ bootstrap: [AppComponent]
 })
 export class AppModule { }
